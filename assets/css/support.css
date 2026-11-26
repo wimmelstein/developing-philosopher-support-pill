@@ -1,5 +1,5 @@
 /*
- * Support button styles.
+ * Support pill styles.
  * Colours pull from the active theme's tokens when present (so the button
  * matches the Developing Philosopher theme, light and dark), and fall back
  * to sensible defaults on any other theme.

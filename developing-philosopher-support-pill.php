@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       Discreet Support Button
- * Description:       A small fixed support button that expands to your donation links. The title and the donation methods are configurable under Settings > Support button.
+ * Plugin Name:       Developing Philosopher Support Pill
+ * Description:       A small fixed support button that expands to your donation links. The title and the donation methods are configurable under Settings > Support pill.
  * Version:           1.0.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Wim Wiltenburg
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       discreet-support-button
+ * Text Domain:       developing-philosopher-support-pill
  *
  * @package DPSupportButton
  */
@@ -44,7 +44,7 @@ register_activation_hook(
 				DPSB_OPTION,
 				array(
 					'enabled' => 1,
-					'title'   => __( 'Support this site', 'discreet-support-button' ),
+					'title'   => __( 'Support this site', 'developing-philosopher-support-pill' ),
 					'methods' => array(),
 				)
 			);
