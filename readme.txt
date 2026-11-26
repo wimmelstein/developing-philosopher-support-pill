@@ -1,59 +1,49 @@
-=== Discreet Support Button ===
+=== Developing Philosopher Support Pill ===
 Contributors: wimmelstein
-Tags: donations, donate, support, ko-fi, paypal
+Donate link: https://ko-fi.com/wimmelstein
+Tags: donation, support, ko-fi, paypal, donate
 Requires at least: 6.0
-Tested up to: 7.0
+Tested up to: 7.1.1
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A small, unobtrusive floating button that expands to your donation links. Set the title and methods in the admin, no coding required.
+A discreet support button that expands to show your donation methods, such as Ko-fi and PayPal.
 
 == Description ==
 
-Discreet Support Button gives your readers one quiet way to support your work. It sits in the corner as a single labelled button and stays that way until someone taps it, then opens to the donation links you have chosen. No banner across the page, no third-party script, nothing competing for attention while people read.
+Developing Philosopher Support Pill adds a small, unobtrusive support button to your site. It sits quietly in the corner while people read, and expands on click to reveal the donation methods you have configured.
 
-It is made for writers, makers, and small sites that want to invite support without turning a page into a fundraising drive. You decide the wording and the links, and the button does nothing else.
-
-Everything is set under Settings > Support button:
-
-* The title shown on the closed button, in your own words.
-* A simple on and off switch.
-* Any number of donation methods, each a label and a link: Ko-fi, PayPal, Buy Me a Coffee, Patreon, a bank page, whatever you use.
-
-The button appears only once it is switched on and has at least one link, so your site stays untouched until you are ready. It collects nothing, makes no external requests, and loads its small stylesheet and script only on the pages where it is shown. Its colours follow your theme when the theme offers them, in both light and dark, and fall back to quiet defaults otherwise.
+You control the button label, whether it shows at all, and one or more donation methods, each a labelled link pointing wherever you like (Ko-fi, PayPal, or anything else). Nothing is hardcoded: the methods you add in the settings are the methods your readers see.
 
 == Installation ==
 
-1. In your admin, go to Plugins > Add New > Upload Plugin and choose the plugin zip, or search for it once it is in the directory.
-2. Activate the plugin.
-3. Go to Settings > Support button. Set a title, tick to show the button, add one or more donation methods, and save.
+1. In your admin, go to Plugins > Add New and search for "Developing Philosopher Support Pill".
+2. Click Install Now, then Activate.
+3. Go to Settings > Support pill. Set a title, tick to show the button, add one or more donation methods, and save.
 
 == Frequently Asked Questions ==
 
-= Does the plugin collect or send any data? =
+= Where does the button appear? =
 
-No. It only outputs the links you configure, and it makes no external requests.
+In the bottom corner of your site, on top of your content, at rest until a reader clicks it.
 
-= Why is the button not showing? =
+= Which donation services are supported? =
 
-It appears only when it is switched on and has at least one donation method with a link. Check both under Settings > Support button.
+Any of them. Each method is just a label and a link, so it works with Ko-fi, PayPal, or any URL you want to point people to.
 
-= Can I add more than two donation methods? =
+= Can I hide the button without deactivating the plugin? =
 
-Yes. Add as many labelled links as you like with the Add method button.
+Yes. Untick "Display the support button on the site" in the settings and save.
 
-= Where do the button's colours come from? =
+== Screenshots ==
 
-From your active theme's colour variables when it provides them, otherwise from built in defaults. This lets it match themes that expose those variables, in both light and dark.
+1. The support pill at rest, in the corner of a post.
+2. The pill expanded, showing the configured donation methods.
+3. The settings panel under Settings > Support pill.
 
 == Changelog ==
 
 = 1.0.0 =
 * Initial release.
-
-== Upgrade Notice ==
-
-= 1.0.0 =
-Initial release.

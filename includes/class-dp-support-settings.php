@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class DP_Support_Settings {
 
 	const GROUP = 'dpsb_group';
-	const PAGE  = 'discreet-support-button';
+	const PAGE  = 'developing-philosopher-support-pill';
 
 	private static $instance = null;
 
@@ -31,7 +31,7 @@ class DP_Support_Settings {
 		add_action( 'admin_init', array( $this, 'register' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin' ) );
 		add_filter(
-			'plugin_action_links_' . plugin_basename( DPSB_DIR . 'discreet-support-button.php' ),
+			'plugin_action_links_' . plugin_basename( DPSB_DIR . 'developing-philosopher-support-pill.php' ),
 			array( $this, 'settings_link' )
 		);
 	}
@@ -54,8 +54,8 @@ class DP_Support_Settings {
 
 	public function add_menu() {
 		add_options_page(
-			__( 'Discreet Support Button', 'discreet-support-button' ),
-			__( 'Support button', 'discreet-support-button' ),
+			__( 'Developing Philosopher Support Pill', 'developing-philosopher-support-pill' ),
+			__( 'Support pill', 'developing-philosopher-support-pill' ),
 			'manage_options',
 			self::PAGE,
 			array( $this, 'render_page' )
@@ -82,7 +82,7 @@ class DP_Support_Settings {
 	 */
 	public function settings_link( $links ) {
 		$url  = admin_url( 'options-general.php?page=' . self::PAGE );
-		$link = '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Settings', 'discreet-support-button' ) . '</a>';
+		$link = '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Settings', 'developing-philosopher-support-pill' ) . '</a>';
 		array_unshift( $links, $link );
 		return $links;
 	}
@@ -138,30 +138,30 @@ class DP_Support_Settings {
 		);
 		?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'Discreet Support Button', 'discreet-support-button' ); ?></h1>
+			<h1><?php esc_html_e( 'Developing Philosopher Support Pill', 'developing-philosopher-support-pill' ); ?></h1>
 			<form method="post" action="options.php">
 				<?php settings_fields( self::GROUP ); ?>
 				<table class="form-table" role="presentation">
 					<tr>
-						<th scope="row"><?php esc_html_e( 'Show the button', 'discreet-support-button' ); ?></th>
+						<th scope="row"><?php esc_html_e( 'Show the button', 'developing-philosopher-support-pill' ); ?></th>
 						<td>
 							<label>
 								<input type="checkbox" name="<?php echo esc_attr( DPSB_OPTION ); ?>[enabled]" value="1" <?php checked( $opt['enabled'], 1 ); ?> />
-								<?php esc_html_e( 'Display the support button on the site', 'discreet-support-button' ); ?>
+								<?php esc_html_e( 'Display the support button on the site', 'developing-philosopher-support-pill' ); ?>
 							</label>
 						</td>
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="dpsb-title"><?php esc_html_e( 'Button title', 'discreet-support-button' ); ?></label>
+							<label for="dpsb-title"><?php esc_html_e( 'Button title', 'developing-philosopher-support-pill' ); ?></label>
 						</th>
 						<td>
-							<input type="text" id="dpsb-title" class="regular-text" name="<?php echo esc_attr( DPSB_OPTION ); ?>[title]" value="<?php echo esc_attr( $opt['title'] ); ?>" placeholder="<?php esc_attr_e( 'Support this site', 'discreet-support-button' ); ?>" />
-							<p class="description"><?php esc_html_e( 'The text shown on the closed button.', 'discreet-support-button' ); ?></p>
+							<input type="text" id="dpsb-title" class="regular-text" name="<?php echo esc_attr( DPSB_OPTION ); ?>[title]" value="<?php echo esc_attr( $opt['title'] ); ?>" placeholder="<?php esc_attr_e( 'Support this site', 'developing-philosopher-support-pill' ); ?>" />
+							<p class="description"><?php esc_html_e( 'The text shown on the closed button.', 'developing-philosopher-support-pill' ); ?></p>
 						</td>
 					</tr>
 					<tr>
-						<th scope="row"><?php esc_html_e( 'Donation methods', 'discreet-support-button' ); ?></th>
+						<th scope="row"><?php esc_html_e( 'Donation methods', 'developing-philosopher-support-pill' ); ?></th>
 						<td>
 							<div id="dpsb-methods">
 								<?php foreach ( $methods as $i => $method ) : ?>
@@ -169,9 +169,9 @@ class DP_Support_Settings {
 								<?php endforeach; ?>
 							</div>
 							<p>
-								<button type="button" class="button" id="dpsb-add"><?php esc_html_e( 'Add method', 'discreet-support-button' ); ?></button>
+								<button type="button" class="button" id="dpsb-add"><?php esc_html_e( 'Add method', 'developing-philosopher-support-pill' ); ?></button>
 							</p>
-							<p class="description"><?php esc_html_e( 'Each method is a labelled link, for example "Buy me a coffee" pointing to your Ko-fi page. Add as many as you like.', 'discreet-support-button' ); ?></p>
+							<p class="description"><?php esc_html_e( 'Each method is a labelled link, for example "Buy me a coffee" pointing to your Ko-fi page. Add as many as you like.', 'developing-philosopher-support-pill' ); ?></p>
 
 							<script type="text/html" id="dpsb-row-template">
 								<?php
@@ -206,9 +206,9 @@ class DP_Support_Settings {
 		$name = DPSB_OPTION . '[methods][' . $idx . ']';
 		?>
 		<div class="dpsb-row">
-			<input type="text" name="<?php echo esc_attr( $name ); ?>[label]" value="<?php echo esc_attr( $method['label'] ); ?>" placeholder="<?php esc_attr_e( 'Label, e.g. Buy me a coffee', 'discreet-support-button' ); ?>" />
+			<input type="text" name="<?php echo esc_attr( $name ); ?>[label]" value="<?php echo esc_attr( $method['label'] ); ?>" placeholder="<?php esc_attr_e( 'Label, e.g. Buy me a coffee', 'developing-philosopher-support-pill' ); ?>" />
 			<input type="url" name="<?php echo esc_attr( $name ); ?>[url]" value="<?php echo esc_attr( $method['url'] ); ?>" placeholder="https://ko-fi.com/yourname" />
-			<button type="button" class="button dpsb-remove" aria-label="<?php esc_attr_e( 'Remove this method', 'discreet-support-button' ); ?>">&times;</button>
+			<button type="button" class="button dpsb-remove" aria-label="<?php esc_attr_e( 'Remove this method', 'developing-philosopher-support-pill' ); ?>">&times;</button>
 		</div>
 		<?php
 	}

@@ -49,7 +49,7 @@ class DP_Support_Render {
 		}
 
 		$opt   = DP_Support_Settings::get();
-		$title = '' !== $opt['title'] ? $opt['title'] : __( 'Support this site', 'discreet-support-button' );
+		$title = '' !== $opt['title'] ? $opt['title'] : __( 'Support this site', 'developing-philosopher-support-pill' );
 		?>
 <div class="dp-support" data-dp-support>
 	<button type="button" class="dp-support__toggle" aria-expanded="false" aria-controls="dp-support-panel">

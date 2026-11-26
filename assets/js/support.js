@@ -1,5 +1,5 @@
 /**
- * Support button: expand and collapse the panel of donation links.
+ * Support pill: expand and collapse the panel of donation links.
  */
 ( function () {
 	'use strict';
